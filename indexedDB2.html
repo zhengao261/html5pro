@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB2 test</title>
+</head>
+<body>
+    <input type="button" value="数据库更新" onclick="versionUpdate()">
+
+
+
+    <script type="text/javascript">
+        function versionUpdate () {
+            var dbName = "indexedDBtest" ;
+            var dbversion = 2;
+            var idb;
+            var dbConnect = indexedDB.open(dbName,dbversion);
+            dbConnect.onsuccess = function(e){
+                alert("数据库连接成功!");
+                idb = e.target.result;
+            };
+            dbConnect.error = function() {
+                alert("数据库连连接失败");
+            };
+            dbConnect.onupgradeneeded = function(e) {
+                idb = e.target.result;
+                var tx = e.transaction;
+                var oldVersion = e.oldVersion;
+                var newVersion = e.newVersion;
+                alert("数据库版本更新"+oldVersion+"-->"+newVersion);
+
+            }
+        }
+
+    </script>
+</body>
+</html>

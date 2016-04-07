@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB test</title>
+</head>
+<body>
+    <input type="button" value="创建数据库" onclick="connectDataBase()">
+    <script type="text/javascript">
+        function connectDataBase () {
+            var dbName = "indexedDB" ;
+            var dbVersion = 1;
+            var idb;
+            var dbConnect = indexedDB.open(dbName,dbVersion);
+            dbConnect.onsuccess = function (e) {
+                idb = e.target;
+                alert("数据库连接成功");
+                console.log(idb);
+            } ;
+            dbConnect.onerror = function () {
+                alert("连接数据库失败");
+            } ;
+
+        }
+    </script>
+</body>
+</html>

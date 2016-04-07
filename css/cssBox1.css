@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+.contain {
+    font-size: 12px;
+    margin: 0px auto;
+    height: auto;
+    width: 805px;
+    font-size: 12px;
+}
+.con-box {
+    height: 300px;
+    width: 192px;
+    margin: 3px;
+
+    float: left;
+    border:1px dashed #0099CC;
+}
+.con-box h1 {
+    height: 20px;
+    width: 179px;
+    color: #FFFFFF;
+    padding: 6px 3px 3px 10px;
+    background-color: #0099CC;
+    font-size: 16px;
+}
+.con-box p{
+
+    line-height: 1.5em;
+    text-indent: 2em;
+    margin: 5px 5px 5px 5px;
+}
+.contain2 {
+    font-size: 12px;
+    margin: 0px auto;
+    height: auto;
+    width: 805px;
+    font-size: 12px;
+    clear: both;
+}
+.contain2 h1 {
+    background-color: #FF6699;
+}
